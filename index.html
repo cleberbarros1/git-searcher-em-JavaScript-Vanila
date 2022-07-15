@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitSearcher</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <header class="cabecalho-principal">
+            <div class="logo-principal">
+                <img src="img/git.PNG" alt="imagem-github" class="git-logo"><span class="git-main-text"><a href="index.html"> GitSearcher</a></span>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="barra-de-procura" placeholder="Entre com um username" required>
+                <button id="button-trigger">Procurar</button>
+            </div>
+        </header>
+
+        <section class="profile-wrapper" id="profile-wrapper">
+            <div class="profile-container">
+                
+                <div class="profile-image"><img src="" alt="" id="prof-pic"></div> 
+                <div class="profile-infos">
+
+                    <div class="info">
+                        <div id="nome-completo">Nomea Completo</div>
+                        <span><b>Username: </b></span><a id ="link-User" target="_blank" href=""><span id="user-name">Username:</span></a><br>
+                        <span><b>Company: </b></span><span id="compa-ny">Company:</span><br>
+                        <span><b>Location: </b></span><span id="lo-cation">Location:</span><br>
+                        <span><b>Blog: </b></span> <a id ="link-Blog" target="_blank" href=""><span id="blo-og">Blog</span></a><br>
+                        <span><b>Bio: </b></span><span id="bi-o">Bio:</span><br>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="profile-numbers" id="profile-numbers">
+            <ul class="prof-numbers">
+                <li>Followers:</li>
+                <li>Followings:</li>
+                <li>Gits:</li>
+                <li>Repos:</li>
+            </ul>
+        </section>
+
+        <section class="project-wrapper" id="project-wrapper">
+            <div class="repos-container">
+                <div class="repos-title-div">
+                    <img src="img/folder.png">
+                    <span class="repos-title"> Repos.</span>
+                </div>
+
+                <ul id="repos-list"></ul>
+
+            </div>
+            <div class="starred-container">
+                <div class="starred-title-div">
+                    <img src="img/star.png">
+                    <span class="starred-title">Starred</span>
+                </div>
+
+                <ul id="starred-list"></ul>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer> 
+        Feito por: Cleber Barros<br>
+        Website de procura sem fins lucrativos - julho de 2022
+    </footer>
+    
+</body>
+<script language="javascript" src="assets/script.js"></script>
+</html>
