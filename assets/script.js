@@ -17,7 +17,7 @@ async function connect(){
     document.getElementById('prof-pic').src = data.avatar_url;
     document.getElementById('nome-completo').innerHTML = data.name;
     document.getElementById('user-name').innerHTML = data.login;
-    document.getElementById('link-User').href = data.login;
+    document.getElementById('link-User').href = data.html_url;
     document.getElementById('compa-ny').innerHTML = data.company;
     document.getElementById('lo-cation').innerHTML =  data.location;
     document.getElementById('blo-og').innerHTML = data.blog;
