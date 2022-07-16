@@ -1,9 +1,29 @@
+function fadeOut() {
+    document.getElementById("mensagem-connect").style = "opacity: 0; height: 0px;";
+}
+
+function fadeIn(mensagem, cor) {
+    document.getElementById("mensagem-connect").innerHTML = mensagem;
+    document.getElementById("mensagem-connect").style = `opacity: 1; background: ${cor};`;
+}
+
 async function connect(){
 
     let nome_do_usuario = document.getElementById("barra-de-procura").value;
 
-    if(nome_do_usuario == document.getElementById('user-name').innerHTML || !nome_do_usuario) {
-        return alert("Nome de usuário inválido ou repetido");
+    if(nome_do_usuario == document.getElementById('user-name').innerHTML) {
+
+        fadeIn("Esse nome de usuário acabou de ser pesquisado.", "gray")
+        setTimeout(fadeOut, 2000);
+        
+        return;
+    }
+
+    if(!nome_do_usuario) {
+        fadeIn("Nome de usuário inválido.", "red")
+        setTimeout(fadeOut, 2000);
+        
+        return;
     }
 
     document.getElementById("profile-wrapper").style = "opacity: 0; height: 0px";
@@ -13,6 +33,16 @@ async function connect(){
     try {
     conteudo = await fetch(`https://api.github.com/users/${nome_do_usuario}`);
     data = await conteudo.json();
+
+    if(!data.name) {
+        fadeIn("Usuário não encontrado.", "red")
+        setTimeout(fadeOut, 2000);
+        
+        return;
+    }
+
+    fadeIn("Achei!", "green")
+        setTimeout(fadeOut, 2000);
 
     document.getElementById('prof-pic').src = data.avatar_url;
     document.getElementById('nome-completo').innerHTML = data.name;
@@ -62,4 +92,4 @@ async function connect(){
 buttonConnect = document.getElementById("button-trigger");
 buttonConnect.addEventListener("click", connect);
 
-
+setTimeout(fadeOut, 2000);

@@ -51,6 +51,19 @@ header {
     color: black;
 }
 
+#mensagem-connect {
+    background: green;
+    color: white;
+    font-size: 16px;
+    width: 380px;
+    margin-top: 10px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 7px;
+    transition: .3s;
+
+}
+
 
 header img {
     width: 80px;
