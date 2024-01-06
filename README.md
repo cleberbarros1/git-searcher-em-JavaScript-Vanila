@@ -16,4 +16,4 @@ https://cleberbarros1.github.io/git-searcher-em-JavaScript-Vanila/
 
 
 
-![img3](/img3.PNG)
+![img3](img3.PNG)

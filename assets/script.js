@@ -92,4 +92,8 @@ async function connect(){
 buttonConnect = document.getElementById("button-trigger");
 buttonConnect.addEventListener("click", connect);
 
+document.addEventListener("keypress", (key) => {
+    if(key.code == "Enter" || key.code == "NumpadEnter"){ connect(); }
+});
+
 setTimeout(fadeOut, 2000);

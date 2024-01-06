@@ -72,7 +72,7 @@ header img {
 }
 
 .logo-principal:hover img {
-    transform: rotateY(360deg);
+    transform: rotateX(360deg) rotateY(180deg);
 }
 
 
@@ -110,7 +110,7 @@ header img {
     margin-right: 10px;
     border-radius: 5px;
     border: none;
-    opacity: .1;
+    opacity: .5;
     transition: .3s;
     box-shadow: 2px 2px 8px;
     font-family: 'Kanit', sans-serif;
@@ -145,14 +145,15 @@ header img {
     #button-trigger {
     padding: 5px 10px;
     font-size: 14px;
+    
     }
 
 }
 
 #button-trigger:hover {
-    background-color: green;
+    background-color: rgb(13, 145, 13);
     color: white;
-    box-shadow: 3px 3px 7px black;
+   
 
 }
 
@@ -196,13 +197,13 @@ header img {
     width: 200px;
     border-radius: 50%;
     box-shadow: 4px 4px 8px;
-    transition: .5s;
+    transition: 1s;
     cursor: pointer;
     
 }
 
 .profile-image:hover img {
-    transform: rotateY(180deg);
+    transform: rotateX(360deg) rotateY(180deg);
     
 }
 
